@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const tasks = require("./routes/tasks");
+// Middleware
+
+app.use(express.json());
+
+
 // ROUTES
 app.get("/hello", (req, res) => {
   res.send("Task Manager App");
